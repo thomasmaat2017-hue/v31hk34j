@@ -1,6 +1,6 @@
-PROJECT SAMENVATTING - TRAVIAN CLASSIC CLONE
+PROJECT SAMENVATTING - War Game
 Huidige Status
-We hebben een volledig functionele Travian Classic clone gebouwd met:
+We hebben een volledig functionele War Game gebouwd met:
 
 Technologie Stack
 Backend: PHP 8+ met PDO
@@ -11,7 +11,7 @@ Frontend: Vanilla HTML/CSS/JS (responsive, mobile-first)
 
 Geen frameworks (geen Bootstrap, geen Laravel, puur vanilla)
 
-Database Structuur (16+ tabellen)
+Database Structuur (21 tabellen)
 users - gebruikers met tribe (roman/teuton/gaul)
 
 villages - dorpen met x/y coördinaten
@@ -40,48 +40,7 @@ quests + user_quests
 
 player_stats, server_settings, etc.
 
-Complete Bestandsstructuur
-text
-travian-clone/
-├── public/
-│   ├── index.php
-│   ├── login.php
-│   ├── register.php
-│   ├── logout.php
-│   ├── village.php (14 gebouwen, prerequisites, queue)
-│   ├── map.php (interactieve grid kaart)
-│   ├── military.php (troepen trainen, aanvallen)
-│   ├── alliance.php (allianties, berichten)
-│   ├── messages.php (privé berichten)
-│   ├── css/style.css
-│   ├── js/main.js
-│   ├── includes/header.php (resources, dorp selector)
-│   └── ajax/
-│       ├── map.php
-│       ├── village_info.php
-│       ├── resources.php
-│       ├── upgrade.php
-│       ├── send_attack.php
-│       ├── get_training_cost.php
-│       ├── get_message.php
-│       ├── set_current_village.php
-│       ├── found_village.php
-│       └── abandon_oasis.php
-├── src/
-│   ├── config/database.php
-│   ├── classes/
-│   │   ├── User.php
-│   │   ├── Village.php
-│   │   ├── Building.php (14 gebouwen, prerequisites)
-│   │   ├── Battle.php (troop stats, training costs)
-│   │   ├── Alliance.php
-│   │   └── Message.php
-│   └── cron/
-│       ├── resource_update.php
-│       ├── building_queue.php
-│       ├── training_queue.php
-│       └── troop_movements.php
-└── db/schema.sql (complete database)
+
 Gebouwen (14 stuks)
 main_building - basis, verhoogt bouwsnelheid
 

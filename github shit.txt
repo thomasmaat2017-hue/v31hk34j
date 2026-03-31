@@ -1,1 +1,0 @@
-xcopy C:\xampp\projects\travianv2\* C:\xampp\projects\v31hk34j\ /E /H /C /I
