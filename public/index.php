@@ -10,7 +10,7 @@
 <body>
     <div class="hero-section">
         <div class="hero-content">
-            <h1>🏛️ Travian Classic123</h1>
+            <h1>🏛️ Travian Classic1234</h1>
             <p>Build an empire, command armies, and conquer the ancient world!</p>
             <div class="button-group">
                 <a href="login.php" class="btn btn-primary">Login</a>
