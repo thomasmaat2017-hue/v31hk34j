@@ -1,0 +1,7 @@
+C:\xampp\php\php.exe -f C:\xampp\projects\travianv2\src\cron\building_queue.php
+
+C:\xampp\php\php.exe -f C:\xampp\projects\travianv2\src\cron\resource_update.php
+
+C:\xampp\php\php.exe -f C:\xampp\projects\travianv2\src\cron\troop_movements.php
+
+C:\xampp\php\php.exe -f C:\xampp\projects\travianv2\src\cron\training_queue.php

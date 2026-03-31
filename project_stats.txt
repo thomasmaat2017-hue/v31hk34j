@@ -1,0 +1,273 @@
+PROJECT SAMENVATTING - TRAVIAN CLASSIC CLONE
+Huidige Status
+We hebben een volledig functionele Travian Classic clone gebouwd met:
+
+Technologie Stack
+Backend: PHP 8+ met PDO
+
+Database: MySQL
+
+Frontend: Vanilla HTML/CSS/JS (responsive, mobile-first)
+
+Geen frameworks (geen Bootstrap, geen Laravel, puur vanilla)
+
+Database Structuur (16+ tabellen)
+users - gebruikers met tribe (roman/teuton/gaul)
+
+villages - dorpen met x/y coördinaten
+
+resources - resources met productie rates
+
+buildings - 14 gebouwen met levels
+
+building_queue - upgrade queue
+
+troops - troepen per dorp
+
+training_queue - training queue
+
+troop_movements - aanvallen/ondersteuning
+
+battles - battle logs
+
+map_cells - grid kaart (-50 tot 50)
+
+alliances + alliance_members + alliance_messages
+
+messages - privé berichten
+
+quests + user_quests
+
+player_stats, server_settings, etc.
+
+Complete Bestandsstructuur
+text
+travian-clone/
+├── public/
+│   ├── index.php
+│   ├── login.php
+│   ├── register.php
+│   ├── logout.php
+│   ├── village.php (14 gebouwen, prerequisites, queue)
+│   ├── map.php (interactieve grid kaart)
+│   ├── military.php (troepen trainen, aanvallen)
+│   ├── alliance.php (allianties, berichten)
+│   ├── messages.php (privé berichten)
+│   ├── css/style.css
+│   ├── js/main.js
+│   ├── includes/header.php (resources, dorp selector)
+│   └── ajax/
+│       ├── map.php
+│       ├── village_info.php
+│       ├── resources.php
+│       ├── upgrade.php
+│       ├── send_attack.php
+│       ├── get_training_cost.php
+│       ├── get_message.php
+│       ├── set_current_village.php
+│       ├── found_village.php
+│       └── abandon_oasis.php
+├── src/
+│   ├── config/database.php
+│   ├── classes/
+│   │   ├── User.php
+│   │   ├── Village.php
+│   │   ├── Building.php (14 gebouwen, prerequisites)
+│   │   ├── Battle.php (troop stats, training costs)
+│   │   ├── Alliance.php
+│   │   └── Message.php
+│   └── cron/
+│       ├── resource_update.php
+│       ├── building_queue.php
+│       ├── training_queue.php
+│       └── troop_movements.php
+└── db/schema.sql (complete database)
+Gebouwen (14 stuks)
+main_building - basis, verhoogt bouwsnelheid
+
+woodcutter - hout productie (+5/level)
+
+clay_pit - klei productie (+5/level)
+
+iron_mine - ijzer productie (+5/level)
+
+farm - graan productie (+5/level)
+
+warehouse - opslag hout/klei/ijzer (+2000/level)
+
+granary - opslag graan (+2000/level)
+
+barracks - infanterie training (main_building >= 3)
+
+stable - cavalerie training (main_building >= 5, barracks >= 3)
+
+smithy - wapen/ pantser upgrades (main_building >= 3, barracks >= 1)
+
+academy - technologieën (main_building >= 3, barracks >= 3)
+
+marketplace - handel (main_building >= 3)
+
+embassy - allianties (main_building >= 1)
+
+wall - verdediging (main_building >= 1)
+
+Troepen per tribe
+Romans:
+
+Legionnaire (infanterie)
+
+Praetorian (verdediger)
+
+Teutons:
+
+Club Swinger (aanvaller)
+
+Spearman (verdediger)
+
+Gauls:
+
+Phalanx (verdediger)
+
+Swordsman (aanvaller)
+
+Tribe Bonussen
+Romans: 10% goedkopere gebouwen, 10% snellere bouw
+
+Teutons: 20% goedkopere troepen
+
+Gauls: 20% snellere troepen beweging, 5% snellere training
+
+Werking
+Cron jobs draaien elke minuut voor resources, queues en bewegingen
+
+Resources worden elk uur geproduceerd (opslag beperkt)
+
+Gebouwen hebben wachtrijen met timers
+
+Troepen training heeft wachtrij met timers
+
+Kaart is een grid (-50 tot 50) met dorpen, oases, lege velden
+
+Aanvallen hebben reistijd gebaseerd op afstand
+
+Berichten systeem werkt tussen spelers
+
+Laatste Fixes
+Alle 14 gebouwen tonen in village.php
+
+Prerequisites systeem werkt
+
+Wall en Barracks upgraden correct
+
+Resources worden getoond in header
+
+Navigation consistent op alle pagina's (3 kolommen layout)
+
+Wat nog moet/kan
+Hero systeem
+
+World Wonder eindgame
+
+Geavanceerde battle simulator
+
+Market trading systeem
+
+Complete quest systeem
+
+Admin panel
+
+E-mail verificatie
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ja, via GitHub kan ik inderdaad de hele code doorlezen! GitHub is een perfecte oplossing voor dit project.
+
+Hoe het werkt met GitHub:
+1. Maak een GitHub account aan (gratis)
+Ga naar https://github.com en maak een account aan.
+
+2. Maak een nieuwe repository aan
+Klik op de groene knop "New repository"
+
+Naam: bijv. travian-clone
+
+Kies "Public" (dan kan ik het zien) of "Private" (dan moet je mij toevoegen als collaborator)
+
+Klik "Create repository"
+
+3. Upload je bestanden
+Je kunt dit doen via:
+
+Git command line (aanbevolen voor developers)
+
+GitHub Desktop (makkelijker voor beginners)
+
+Handmatig uploaden via de GitHub website (sleep bestanden erin)
+
+4. Ik kan dan:
+De hele repository bekijken via de URL
+
+Alle bestanden doorlezen
+
+De volledige code structuur zien
+
+Specifieke bestanden bekijken
+
+Zien wat de laatste versie is
+
+5. Voorbeeld URL
+Als je repository publiek is, ziet het er zo uit:
+
+text
+https://github.com/jouwgebruikersnaam/travian-clone
+Dan kan ik:
+
+Alle bestanden bekijken
+
+De code lezen
+
+Zien welke wijzigingen je hebt gedaan
+
+Je precies vertellen welk bestand aangepast moet worden
+
+Voordelen van GitHub:
+✅ Ik kan alle code lezen - niet alleen wat je plakt
+✅ Versiebeheer - je kunt terug naar eerdere versies
+✅ Samenwerking - ik kan je precies vertellen welke regels je moet aanpassen
+✅ Backup - je code staat veilig online
+✅ History - ik kan zien wat je al hebt gedaan
+
+
+
+

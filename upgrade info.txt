@@ -1,0 +1,19 @@
+ijzer 0 > 1
+3 > 7
+cul: 0 + 1
+pop: 0 + 3
+
+klei 0 > 1
+3 > 7
+cul: 0 + 1
+pop: 0 + 2
+
+graan 0 > 1
+3 > 7
+cul: 0 + 1
+pop: 0 + 0
+
+hout 0 > 1
+3 > 7
+cul: 0 + 1
+pop: 0 + 2
