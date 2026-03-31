@@ -499,7 +499,7 @@ function checkBuildingPrerequisites($building_type, $buildings, $building_class)
 <!-- Left Column - Village Info -->
 <div class="left-column">
     <div class="village-card">
-        <h3>🏠 Village Info1</h3>
+        <h3>🏠 Village Info12</h3>
         <div class="village-name"><?php echo htmlspecialchars($villages[0]['name']); ?></div>
         
         <div class="village-stats">
