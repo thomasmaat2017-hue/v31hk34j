@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if($result['success']) {
         $_SESSION['user_id'] = $user->id;
         $_SESSION['username'] = $user->username;
-        $_SESSI1ON['tribe'] = $user->tribe;
+        $_SESSION['tribe'] = $user->tribe;
         header('Location: village.php');
         exit();
     } else {
